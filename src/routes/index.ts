@@ -8,7 +8,7 @@ router.use('/api/images', imagesRouter);
 router.get(
     '/',
     (req: Request, res: Response): void => {
-        res.send('Welcome to Image_Processing_API');
+        res.end('<h1>Welcome to Image_Processing_API</h1>');
     }
 );
 
