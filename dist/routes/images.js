@@ -52,9 +52,8 @@ router.get('/', validation_1.default, function (req, res) { return __awaiter(voi
                 return [4 /*yield*/, files_1.default.getAvailableImages()];
             case 1:
                 images = _b.sent();
-                console.log(images);
                 if (!(typeof filename !== 'string' || !images.includes(filename))) return [3 /*break*/, 2];
-                return [2 /*return*/, res.status(400).end('Image is not exist !!')];
+                return [2 /*return*/, res.status(400).end('Please enter a valid file name !')];
             case 2:
                 if (!(typeof width == 'string' && typeof height == 'string')) return [3 /*break*/, 6];
                 return [4 /*yield*/, files_1.default.thumbIsExist({ filename: filename, width: (parseInt(width)), height: (parseInt(height)) })];
@@ -63,9 +62,7 @@ router.get('/', validation_1.default, function (req, res) { return __awaiter(voi
                 console.log('PATH: ', exist);
                 if (!exist) return [3 /*break*/, 4];
                 return [2 /*return*/, res.status(200).sendFile(exist)];
-            case 4:
-                console.log('Creating Thumbnail ...');
-                return [4 /*yield*/, files_1.default.createThumb({ filename: filename, width: (parseInt(width)), height: (parseInt(height)) })];
+            case 4: return [4 /*yield*/, files_1.default.createThumb({ filename: filename, width: (parseInt(width)), height: (parseInt(height)) })];
             case 5:
                 thumb = _b.sent();
                 if (thumb) {
