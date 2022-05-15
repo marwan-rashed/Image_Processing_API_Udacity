@@ -12,3 +12,4 @@ app.use(index_1.default);
 app.listen(PORT, function () {
     console.log("Server is running on PORT ".concat(PORT, " ..."));
 });
+exports.default = app;
