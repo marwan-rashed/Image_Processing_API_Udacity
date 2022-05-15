@@ -48,6 +48,6 @@ afterAll(async (): Promise<void> => {
         await fs.access(testPath);
         fs.unlink(testPath);
     } catch {
-        console.log('Files cannot be removed !!')
+        
     }
 });

@@ -37,6 +37,6 @@ afterAll(async (): Promise<void> => {
         await fs.access(testPath);
         fs.unlink(testPath);
     } catch {
-        console.log('Image Processing - Files cannot be removed !!')
+        
     }
 });

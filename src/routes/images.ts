@@ -17,7 +17,6 @@ router.get(
         } else {
             if (typeof width == 'string' && typeof height == 'string') {
                 const exist = await Files.thumbIsExist({ filename, width: (parseInt(width)), height: (parseInt(height)) });
-                console.log('PATH: ', exist);
                 if(exist) {
                     return res.status(200).sendFile(exist);
                 } else {
