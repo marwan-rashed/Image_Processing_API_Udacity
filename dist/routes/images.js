@@ -59,7 +59,6 @@ router.get('/', validation_1.default, function (req, res) { return __awaiter(voi
                 return [4 /*yield*/, files_1.default.thumbIsExist({ filename: filename, width: (parseInt(width)), height: (parseInt(height)) })];
             case 3:
                 exist = _b.sent();
-                console.log('PATH: ', exist);
                 if (!exist) return [3 /*break*/, 4];
                 return [2 /*return*/, res.status(200).sendFile(exist)];
             case 4: return [4 /*yield*/, files_1.default.createThumb({ filename: filename, width: (parseInt(width)), height: (parseInt(height)) })];
